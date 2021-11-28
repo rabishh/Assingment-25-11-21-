@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is todo list</h1>
+    
+    <script>
+
+       var todo   =   [ ] ; 
+
+    //Functionality Number 1. 
+    function add_todo_item ( new_item )   { 
+        todo . push ( new_item ) ; 
+    } 
+
+    //Functionality Number 2. 
+    function show_list ( )   { 
+        for ( var   i   =   0 ;   i   <   todo . length ;   i   =   i   +   1 )   { 
+            console . log ( todo [ i ] ) ; 
+        } 
+    } 
+    // mark as done
+    function mark(new_item){
+        for(var i=0;i<todo.length;i++){
+                if(new_item===i){
+                    todo[i]=todo[i]+" ✓";
+                }
+            }
+    }
+    // edit the Todo List 
+    function edit_todo ( new_item   ,   newTodoText )   { 
+    todo [ new_item ] . todoText   =   newTodoText ; 
+    
+    } 
+
+    // delete Todo List 
+    function delete_item ( new_item )   { 
+    todo . splice ( new_item ,   1 ) ; 
+    } 
+</script>
+    
+</body>
+</html>
